@@ -1,0 +1,6 @@
+server:
+  extraArgs:
+  - --insecure
+crds:
+  install: true
+  keep: true

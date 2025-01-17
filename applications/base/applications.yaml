@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: resources
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  project: default
+  source:
+    path: resources/base/
+    repoURL: https://dev.azure.com/DevoteamCMS/Service%20Development/_git/plat-course-az-aks-example
+    targetRevision: argocd-example
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
