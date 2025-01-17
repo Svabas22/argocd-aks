@@ -10,8 +10,8 @@ spec:
   project: default
   source:
     path: applications/base/
-    repoURL: https://dev.azure.com/DevoteamCMS/Service%20Development/_git/plat-course-az-aks-example
-    targetRevision: argocd-example
+    repoURL: https://github.com/Svabas22/plat-course-az-aks-example.git
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
