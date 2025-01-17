@@ -17,3 +17,22 @@ spec:
       prune: true
       selfHeal: true
 ---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ngnix
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ngnix
+  project: default
+  source:
+    path: ngnix/
+    repoURL: https://github.com/Svabas22/plat-course-az-aks-example.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
