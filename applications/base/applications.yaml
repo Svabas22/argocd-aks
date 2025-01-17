@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: resources/base/
-    repoURL: https://github.com/Svabas22/plat-course-az-aks-example.git
+    repoURL: https://github.com/Svabas22/argocd-aks.git
     targetRevision: main
   syncPolicy:
     automated:
@@ -29,7 +29,7 @@ spec:
   project: default
   source:
     path: ngnix/
-    repoURL: https://github.com/Svabas22/plat-course-az-aks-example.git
+    repoURL: https://github.com/Svabas22/argocd-aks.git
     targetRevision: main
   syncPolicy:
     automated:
