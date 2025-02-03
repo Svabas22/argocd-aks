@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  namespace: argocd
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argo-cd-argocd-server
+            port:
+              number: 80
