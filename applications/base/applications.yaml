@@ -9,7 +9,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    path: resources/base/
+    path: resources/overlays/dev
     repoURL: https://github.com/Svabas22/argocd-aks.git
     targetRevision: main
   syncPolicy:
