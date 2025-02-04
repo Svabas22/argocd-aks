@@ -1,0 +1,9 @@
+persistence:
+  enabled: true
+  type: statefulset
+  size: 4Gi
+  storageClassName: "managed-csi-standard-zrs"
+  accessModes:
+    - ReadWriteOnce
+
+replicas: 3
